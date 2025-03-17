@@ -1,7 +1,9 @@
 """
 Library to use position servos directly connected to a signal pin on a micro:bit
 
-Right now only pin0, pin1, and pin2 are supported.
+This version works with pin13, pin14, and pin15 for the Brown Dog Gadgets Bit Board Rover.
+
+
 
 Notes: 
 
@@ -44,8 +46,8 @@ class servo:
         :param type: the type of servo (position or rotation)
         """
         # Confirm the pin is valid
-        if pin not in [pin0, pin1, pin2]:
-            raise ValueError("Invalid pin. Must be pin0, pin1, or pin2.")
+		if pin not in [pin13, pin14x, pin15]:
+			raise ValueError("Invalid pin. Must be pin13, pin14, or pin15.")
         
         self.pin = pin
         
